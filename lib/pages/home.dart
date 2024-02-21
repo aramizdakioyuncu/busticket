@@ -1,4 +1,9 @@
-import 'package:busticket/pages/search.dart';
+// ignore_for_file: avoid_print
+
+import 'package:busticket/pages/main/account.dart';
+import 'package:busticket/pages/main/help.dart';
+import 'package:busticket/pages/main/search.dart';
+import 'package:busticket/pages/main/trip.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -8,32 +13,30 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePage();
 }
 
-int currentPageIndex = 1;
+int currentPageIndex = 0;
 PageController pageController = PageController(initialPage: currentPageIndex);
+late TabController tabController;
 
-class _HomePage extends State<HomePage> {
+class _HomePage extends State<HomePage>
+    with AutomaticKeepAliveClientMixin<HomePage>, TickerProviderStateMixin {
+  @override
+  bool get wantKeepAlive => true;
+
   @override
   void initState() {
     super.initState();
-
-    // Sayfa denetleyicisinin ilk sayfayı ayarlamak için kullanılması
-    // pageController.initialPage = 1;
-    //
-  }
-
-  void changepPage(int index) {
-    pageController.animateToPage(
-      index,
-      duration: const Duration(milliseconds: 300),
-      curve: Curves.ease,
+    tabController = TabController(
+      initialIndex: 0,
+      length: 5,
+      vsync: this,
     );
   }
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 80,
         centerTitle: true,
         backgroundColor: Colors.red,
         title: const Text(
@@ -45,13 +48,20 @@ class _HomePage extends State<HomePage> {
         ),
         foregroundColor: Colors.white,
       ),
-      body: PageView(
-        controller: pageController,
-        children: const [
-          SearchPage(),
-          SearchPage(),
-          SearchPage(),
-          SearchPage(),
+      body: Column(
+        children: [
+          Expanded(
+            child: PageView(
+              physics: const NeverScrollableScrollPhysics(),
+              controller: pageController,
+              children: const [
+                SearchPage(),
+                TripPage(),
+                HelpPage(),
+                AccountPage(),
+              ],
+            ),
+          ),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -82,7 +92,7 @@ class _HomePage extends State<HomePage> {
 
             pageController.animateToPage(
               index,
-              duration: Duration(milliseconds: 300),
+              duration: const Duration(milliseconds: 300),
               curve: Curves.ease,
             );
           });
