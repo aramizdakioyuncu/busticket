@@ -78,7 +78,7 @@ class _HomePage extends State<HomePage>
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.help),
-            label: 'Yardim',
+            label: 'Yardım',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_circle_rounded),

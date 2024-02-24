@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class SearchPage extends StatefulWidget {
-  const SearchPage({Key? key});
+  const SearchPage({
+    super.key,
+  });
 
   @override
   State<SearchPage> createState() => _SearchPage();

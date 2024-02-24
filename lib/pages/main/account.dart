@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AccountPage extends StatefulWidget {
-  const AccountPage({Key? key});
+  const AccountPage({super.key});
 
   @override
   State<AccountPage> createState() => _AccountPage();
@@ -22,6 +22,6 @@ class _AccountPage extends State<AccountPage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold();
   }
 }

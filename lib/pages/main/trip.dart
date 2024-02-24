@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class TripPage extends StatefulWidget {
-  const TripPage({Key? key});
+  const TripPage({
+    super.key,
+  });
 
   @override
   State<TripPage> createState() => _TripPage();
@@ -22,7 +24,7 @@ class _TripPage extends State<TripPage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Column(
         children: [Text("seyahat")],
       ),
