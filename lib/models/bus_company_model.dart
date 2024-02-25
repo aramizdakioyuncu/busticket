@@ -1,13 +1,11 @@
-// ignore_for_file: camel_case_types, file_names
-
-class busCompany {
+class BusCompany {
   final String id;
   final String name;
   final String phoneNumber;
   final String email;
   final List<Bus> buses;
 
-  busCompany({
+  BusCompany({
     required this.id,
     required this.name,
     required this.phoneNumber,
@@ -15,7 +13,7 @@ class busCompany {
     required this.buses,
   });
 
-  factory busCompany.fromJson(Map<String, dynamic> json) {
+  factory BusCompany.fromJson(Map<String, dynamic> json) {
     // JSON'dan BusCompany nesnesini oluştururken, otobüs listesini ayrıca oluşturmalısınız.
     List<Bus> buses = [];
     if (json['buses'] != null) {
@@ -24,7 +22,7 @@ class busCompany {
       });
     }
 
-    return busCompany(
+    return BusCompany(
       id: json['id'],
       name: json['name'],
       phoneNumber: json['phoneNumber'],

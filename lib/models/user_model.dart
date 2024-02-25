@@ -1,20 +1,18 @@
-// ignore_for_file: camel_case_types, file_names
-
-class user {
+class User {
   final String id;
   final String username;
   final String email;
   final String password; // Güvenlik nedeniyle şifre hashlenmiş olmalıdır.
 
-  user({
+  User({
     required this.id,
     required this.username,
     required this.email,
     required this.password,
   });
 
-  factory user.fromJson(Map<String, dynamic> json) {
-    return user(
+  factory User.fromJson(Map<String, dynamic> json) {
+    return User(
       id: json['id'],
       username: json['username'],
       email: json['email'],

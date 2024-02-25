@@ -1,11 +1,9 @@
-// ignore_for_file: camel_case_types, file_names
-
-class district {
+class District {
   final String name;
   final String city;
   final int population;
 
-  district({
+  District({
     required this.name,
     required this.city,
     required this.population,
