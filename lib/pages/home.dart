@@ -36,18 +36,6 @@ class _HomePage extends State<HomePage>
   Widget build(BuildContext context) {
     super.build(context);
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.red,
-        title: const Text(
-          "obilet",
-          style: TextStyle(
-            fontWeight: FontWeight.w800,
-            fontSize: 35,
-          ),
-        ),
-        foregroundColor: Colors.white,
-      ),
       body: Column(
         children: [
           Expanded(

@@ -24,9 +24,14 @@ class _TripPage extends State<TripPage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Seyahatlerim"),
+      ),
       body: Column(
-        children: [Text("seyahat")],
+        children: [
+          Text("seyahat"),
+        ],
       ),
     );
   }

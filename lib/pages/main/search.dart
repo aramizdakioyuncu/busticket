@@ -25,6 +25,18 @@ class _SearchPage extends State<SearchPage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.red,
+        title: const Text(
+          "obilet",
+          style: TextStyle(
+            fontWeight: FontWeight.w800,
+            fontSize: 35,
+          ),
+        ),
+        foregroundColor: Colors.white,
+      ),
       body: Column(
         children: [
           SizedBox(
