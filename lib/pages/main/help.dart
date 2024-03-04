@@ -24,9 +24,17 @@ class _HelpPage extends State<HelpPage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "Yardım",
+            style: TextStyle(color: Colors.white),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.red,
+        ),
         body: Column(
-      children: [Text("sasdasd")],
-    ));
+          children: [],
+        ));
   }
 }
