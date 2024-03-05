@@ -3,7 +3,7 @@
 import 'package:busticket/pages/main/account.dart';
 import 'package:busticket/pages/main/help.dart';
 import 'package:busticket/pages/main/search.dart';
-import 'package:busticket/pages/main/trip.dart';
+import 'package:busticket/pages/main/Trip/trip.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
